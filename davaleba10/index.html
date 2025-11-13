@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <input id="usrInp" placeholder="Enter your task">
+    <button type="submit" onclick="todoBtn()">Add</button>
+
+    <script>
+        function todoBtn() {
+            let usrInp = document.getElementById("usrInp").value.trim();
+
+            if (usrInp === '') {
+                alert('Input must be a valid string');
+            } else {
+                let todoData = localStorage.getItem("todoList");
+                if (todoData === null) {
+                    let data = [];
+                    data.push(usrInp);
+                    localStorage.setItem('todoList', JSON.stringify(data));
+                } else {
+                    todoData = JSON.parse(todoData);
+                    todoData.push(usrInp);
+                    localStorage.setItem('todoList', JSON.stringify(todoData));
+                }
+                document.getElementById("usrInp").value = '';
+                loadTodo();
+            }
+        }
+        function deleteTodo(index) {
+            let todoData = JSON.parse(localStorage.getItem("todoList"));
+            todoData.splice(index, 1);
+            localStorage.setItem("todoList", JSON.stringify(todoData));
+            loadTodo();
+        }
+        function loadTodo() {
+            let todoData = localStorage.getItem("todoList");
+            todoData = JSON.parse(todoData);
+            if (!todoData || todoData.length === 0) {
+                let oldList = document.querySelector('ul');
+                if (oldList) oldList.remove();
+                return;
+            }
+            let exsistingList = document.querySelector('ul');
+            if (exsistingList) {
+                exsistingList.remove();
+            }
+            let res = document.createElement('ul');
+            todoData.forEach((data, index) => {
+                let li = document.createElement('li');
+                li.textContent = data + " ";
+                let delBtn = document.createElement('button');
+                delBtn.textContent = "წაშლა";
+                delBtn.onclick = function() {
+                    deleteTodo(index);
+                };
+                li.appendChild(delBtn);
+                res.appendChild(li);
+            });
+
+            document.body.appendChild(res);
+        }
+        loadTodo();
+    </script>
+</body>
+</html>
