@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regexp Validation Tasks</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+        .valid { color: green; }
+        .invalid { color: red; }
+    </style>
+</head>
+<body>
+
+    <h2>1. მისამართის ვალიდაცია</h2>
+    <input id="address" placeholder="შეიყვანე მისამართი">
+    <p id="addressMsg"></p>
+
+    <h2>2. ტელეფონის ნომერი ქვეყნის კოდით</h2>
+    <input id="phone" placeholder="+9955xxxxxxx">
+    <p id="phoneMsg"></p>
+
+    <h2>3. საფოსტო კოდი</h2>
+    <input id="postal" placeholder="მაგ: 1234">
+    <p id="postalMsg"></p>
+
+    <button onclick="validate()">ვალიდაცია</button>
+
+    <script>
+        function validate() {
+            const address = document.getElementById("address").value;
+            const addressMsg = document.getElementById("addressMsg");
+            const addressRegex = /^[A-Za-z]+$/;
+
+            if (addressRegex.test(address)) {
+                addressMsg.textContent = "✓ მისამართი ვალიდურია";
+                addressMsg.className = "valid";
+            } else {
+                addressMsg.textContent = "✗ მხოლოდ ასოები დაშვებული!";
+                addressMsg.className = "invalid";
+            }
+
+            const phone = document.getElementById("phone").value;
+            const phoneMsg = document.getElementById("phoneMsg");
+
+ 
+            const phoneRegex = /^\+\d{3,4}\d{6,9}$/;
+
+            if (phoneRegex.test(phone)) {
+                phoneMsg.textContent = "✓ ტელეფონის ნომერი ვალიდურია";
+                phoneMsg.className = "valid";
+            } else {
+                phoneMsg.textContent = "✗ არასწორი ტელეფონის ფორმატი!";
+                phoneMsg.className = "invalid";
+            }
+
+            const postal = document.getElementById("postal").value;
+            const postalMsg = document.getElementById("postalMsg");
+            const postalRegex = /^\d{4}$/;
+
+            if (postalRegex.test(postal)) {
+                postalMsg.textContent = "საფოსტო კოდი ვალიდურია";
+                postalMsg.className = "valid";
+            } else {
+                postalMsg.textContent = "საფოსტო კოდი უნდა იყოს ზუსტად 4 ციფრი!";
+                postalMsg.className = "invalid";
+            }
+        }
+    </script>
+</body>
+</html>
