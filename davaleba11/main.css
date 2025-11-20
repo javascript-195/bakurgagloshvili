@@ -1,5 +1,6 @@
 .form-control{
     width: 15%;
+    margin-bottom: 20px;
 }
 .image-container {
     text-align: center; 
@@ -126,4 +127,5 @@
     height: 30px;
     margin-bottom: 20px;
 }
+
 
