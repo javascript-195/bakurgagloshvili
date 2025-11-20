@@ -1,42 +1,30 @@
-/* --- ახალი სტილი კონტეინერისთვის --- */
+.form-control{
+    width: 15%;
+}
 .image-container {
-    /* ეს აუცილებელია, რომ ავტორის სახელი იყოს ცენტრში */
     text-align: center; 
-    /* ეს კურსორი მიუთითებს, რომ კონტეინერზე დაჭერაა შესაძლებელი */
     cursor: pointer; 
-    /* ვაძლევთ ზომას, რომ ეტეოდეს რიგში */
     width: 220px; 
     transition: 0.3s ease;
 }
-
-/* გადატანილი ჰოვერ ეფექტი კონტეინერზე */
 .image-container:hover {
     transform: scale(1.05);
 }
-
-/* ავტორის სახელის სტილი - აქ შევიდა ცვლილება */
 .photographer-name {
-    /* **ცვლილება 1:** ზედა და ქვედა margin-ის გაუქმება, რომ ფოტოზე მიეწებოს */
     margin-top: 0; 
     margin-bottom: 0; 
     font-size: 14px;
     color: #333; 
     font-weight: bold;
     text-align: center;
-    
-    /* --- ფონის ახალი სტილები --- */
-    background-color: #e0e0e0; /* ნაცრისფერი ფონი */
-    padding: 3px 0; /* შიდა დაშორება */
-    /* **ცვლილება 2:** მხოლოდ ქვედა კუთხეების დამრგვალება */
+    background-color: #e0e0e0;
+    padding: 3px 0;
     border-radius: 0 0 4px 4px; 
 }
-
-/* --- თქვენი ორიგინალი ბადის სტილი --- */
 .picCollage {
     width: 100%;
     margin-top: 20px;
 }
-
 .imagesRow1,
 .imagesRow2 {
     display: flex;
@@ -46,22 +34,14 @@
 }
 
 .resultImg {
-    /* დავაპატარავე ზომა, რომ 4 ფოტო ეტეოდეს კომფორტულად */
     width: 200px; 
     height: 150px;
     object-fit: cover;
-    
-    /* **ცვლილება 3:** display: block; - შლის სიცარიელეს inline ელემენტის ქვემოთ */
     display: block;
-    /* **ცვლილება 4:** მხოლოდ ზედა კუთხეების დამრგვალება */
     border-radius: 8px 8px 0 0; 
 }
-
-/* --- Modal/Lightbox სტილები --- */
-
-/* Modal ფანჯარა - ფონი */
 .modal {
-    display: none; /* თავდაპირველად დამალული */
+    display: none;
     position: fixed;
     z-index: 1000; 
     left: 0;
@@ -69,10 +49,8 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.9); /* მუქი გამჭვირვალე ფონი */
+    background-color: rgba(0,0,0,0.9);
 }
-
-/* დახურვის ღილაკი */
 .close {
     position: absolute;
     top: 15px;
@@ -90,10 +68,8 @@
     text-decoration: none;
     cursor: pointer;
 }
-
-/* Modal-ის შიგთავსის კონტეინერი (სურათისთვის და ღილაკებისთვის) */
 .modal-content {
-    margin: 15% auto; /* ცენტრალიზება */
+    margin: 15% auto;
     width: 80%;
     max-width: 900px;
     text-align: center;
@@ -103,7 +79,6 @@
     align-items: center;
 }
 
-/* გადიდებული სურათი (200% ეფექტი) */
 .modal-image {
     margin: auto;
     display: block;
@@ -118,7 +93,6 @@
     transition: transform 0.3s ease;
 }
 
-/* სლაიდერის ღილაკები Modal-ში */
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -152,3 +126,4 @@
     height: 30px;
     margin-bottom: 20px;
 }
+
