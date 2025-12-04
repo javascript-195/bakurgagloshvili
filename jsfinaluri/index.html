@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>კინო პორტალი</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20190816/ourmid/pngtree-film-logo-design-template-vector-isolated-illustration-png-image_1693431.jpg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+  <div class="header-div">
+        <a href="index.html"><img class="img-logo" src="https://png.pngtree.com/png-vector/20190816/ourmid/pngtree-film-logo-design-template-vector-isolated-illustration-png-image_1693431.jpg" alt="ფილმის ლოგო"></a>
+        
+        <nav>
+            <ul class="ul">
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="signin.html">Sign in</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="contentpage.html">Content Page</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+
+            </ul>
+        </nav>
+        
+        <div class="burger-menu-container">
+            
+            <i class="fa-solid fa-bars" id="burgerIcon"></i> 
+
+            <div class="select-dropdown" id="pageSelector">
+                <a href="index.html">Home Page</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="signin.html">Sign in</a>
+                <a href="signup.html">Sign up</a>
+                <a href="contentpage.html">Content Page</a>
+
+            </div>
+            
+        </div>
+        
+    </div>
+        
+    <div class="slider-container">
+        <button class="slider-btn prev-btn" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="slider-wrapper" id="sliderWrapper">
+            <div class="slider-image-wrapper">
+                <img class="header-images" src="https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2025/02/Superman-2025-Official-Teaser-Trailer.jpg" alt="სურათი 1">
+                <span class="image-overlay-text">TOP 5 2025 წლის ფილმები</span>
+                <span class="movie-title-overlay">Superman</span>
+            </div>
+            
+            <div class="slider-image-wrapper">
+                <img class="header-images" src="https://tse3.mm.bing.net/th/id/OIP.sZ20FW2rOvipO8ZSZe5A5AHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="სურათი 2">
+                <span class="image-overlay-text">TOP 5 2025 წლის ფილმები</span>
+                <span class="movie-title-overlay">One Battle After Another</span>
+            </div>
+            
+            <div class="slider-image-wrapper">
+                <img class="header-images" src="https://image.tmdb.org/t/p/original/1KFv63mmcBGVbFl3jxxozoSFlhA.jpg" alt="სურათი 3">
+                <span class="image-overlay-text">TOP 5 2025 წლის ფილმები</span>
+                <span class="movie-title-overlay">F1: The Movie</span>
+            </div>
+            
+            <div class="slider-image-wrapper">
+                <img class="header-images" src="https://tse1.mm.bing.net/th/id/OIP.bXMiSIch5vlNUzWCRCuv9wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="სურათი 4">
+                <span class="image-overlay-text">TOP 5 2025 წლის ფილმები</span>
+                <span class="movie-title-overlay">Sinners</span>
+            </div>
+            
+            <div class="slider-image-wrapper">
+                <img class="header-images" src="https://tse1.mm.bing.net/th/id/OIP.6GRkUjR_tpCsd2YslnAwNQHaD4?rs=1&pid=ImgDetMain&o=7&rm=3" alt="სურათი 5">
+                <span class="image-overlay-text">TOP 5 2025 წლის ფილმები</span>
+                <span class="movie-title-overlay">Weapons</span>
+            </div>
+        </div>
+
+        <button class="slider-btn next-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    </header>
+
+<main class="content-area">
+
+      <section class="api-search-section">
+       <div class="section-header">
+         <h3>
+            ფილმების ძებნა 
+          </h3>
+     </div>
+
+        <div class="search-api-container">
+           <input type="text" id="apiSearchInput" placeholder="ჩაწერეთ ფილმის სათაური და დააჭირეთ Enter-ს...">
+        </div>
+
+        <div id="searchResultsContainer">
+        </div>
+    </section>
+
+    <section class="index-section">
+
+        <div class="section-header">
+            <h3>აუცილებლად სანახავი ფილმების ტრეილერები:</h3>
+        </div>
+        <div class="search-container">
+            <input type="text" id="movieSearchInput" placeholder="ჩაწერეთ ფილმის სახელი...">
+        </div>
+        <div class="content-div">
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/bLvqoHBptjg" title="Forrest Gump - Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Forrest Gump</p>
+                <p>რეჟისორი: Robert Zemeckis</p>
+                <p>სცენარის ავტორები: Winston Groom, Eric Roth</p>
+                <p>მსახიობები (ვარსკვლავები): <br>Tom Hanks, Robin Wright, Gary Sinise</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/vKQi3bBA1y8" title="The Matrix (1999) Official Trailer #1 - Sci-Fi Action Movie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: The Matrix</p>
+                <p>რეჟისორი: Lana Wachowski, Lilly Wachowski</p>
+                <p>სცენარის ავტორები: <br>Lana Wachowski, Lilly Wachowski</p>
+                <p>მსახიობები (ვარსკვლავები): <br>
+Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/BkL9l7qovsE" title="Casablanca (1942) Official Trailer - Humphrey Bogart, Ingrid Bergman Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Casablanca</p>               
+                <p>რეჟისორი: Michael Curtiz</p>
+                <p>სცენარის ავტორები: <br>
+Philip G. Epstein, Julius J. Epstein, Howard Koch</p>
+                <p>მსახიობები (ვარსკვლავები): Humphrey Bogart, Ingrid Bergman, Paul Henreid</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/V75dMMIW2B4" title="The Lord of the Rings: The Fellowship of the Ring Official Trailer #1 - (2001) HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: The Lord of the Rings: The Fellowship of the Ring</p>
+                <p>რეჟისორი: Peter Jackson</p>
+                <p>სცენარის ავტორები: <br>
+J.R.R. Tolkien, Fran Walsh, Philippa Boyens</p>
+                <p>მსახიობები (ვარსკვლავები): Elijah Wood, Ian McKellen, Orlando Bloom</p>
+            </div>
+        </div>
+        <div class="content-div">
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/5ZAhzsi1ybM" title="Pulp Fiction (1994) Official Trailer - Samuel L. Jackson, John Travolta Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Pulp Fiction</p>  
+                <p>რეჟისორი: Quentin Tarantino</p>
+                <p>სცენარის ავტორები: Quentin Tarantino, Roger Avary</p>
+                <p>მსახიობები (ვარსკვლავები): <br>John Travolta, Uma Thurman, Samuel L. Jackson</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/WKuZJjPSLXQ" title="JAWS | Official Trailer | Experience It In IMAX®" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Jaws</p>  
+                <p>რეჟისორი: Steven Spielberg</p>
+                <p>სცენარის ავტორები: Peter Benchley, Carl Gottlieb</p>
+                <p>მსახიობები (ვარსკვლავები): <br>Roy Scheider, Robert Shaw, Richard Dreyfuss</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/YoHD9XEInc0" title="Inception (2010) Official Trailer #1 - Christopher Nolan Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Inception</p>  
+                <p>რეჟისორი: Christopher Nolan</p>
+                <p>სცენარის ავტორები: Christopher Nolan</p>
+                <p>მსახიობები (ვარსკვლავები): <br>Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/2cBja3AbahY" title="Willy Wonka &amp; The Chocolate Factory (1971) Official Trailer - Gene Wilder, Roald Dahl Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Willy Wonka & the Chocolate Factory</p>  
+                <p>რეჟისორი: Mel Stuart</p>
+                <p>სცენარის ავტორები: Roald Dahl, David Seltzer</p>
+                <p>მსახიობები (ვარსკვლავები): <br>Gene Wilder, Jack Albertson, Peter Ostrum</p>
+            </div>
+        </div>
+        <div class="content-div">
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/-pxn49yWVJk" title="Death In Venice (1971) Official Trailer - Luchino Visconti Drama Movie D" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Death In Venice</p>  
+                <p>რეჟისორი: Luchino Visconti</p>
+                <p>სცენარის ავტორები: Luchino Visconti, Nicola Badalucco</p>
+                <p>მსახიობები (ვარსკვლავები): <br>Dirk Bogarde, Romolo Valli, Mark Burns</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/S014oGZiSdI" title="The Shining - Official Trailer [1980] HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: The Shining</p> 
+                <p>რეჟისორი: Stanley Kubrick</p>
+                <p>სცენარის ავტორები: Stephen King, Stanley Kubrick, Diane Johnson</p>
+                <p>მსახიობები (ვარსკვლავები): <br>Jack Nicholson, Shelley Duvall, Danny Lloyd</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/QkZxoko_HC0" title="Green Book - Official Trailer [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Green Book</p> 
+                <p>რეჟისორი: Peter Farrelly</p>
+                <p>სცენარის ავტორები: Nick Vallelonga, Brian Hayes Currie, Peter Farrelly</p>
+                <p>მსახიობები (ვარსკვლავები): <br>Viggo Mortensen, Mahershala Ali, Linda Cardellini</p>
+            </div>
+            <div class="flex-div">
+                <iframe width="100%" class="iframe" src="https://www.youtube.com/embed/hEJnMQG9ev8" title="Mad Max: Fury Road - Official Main Trailer [HD]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>სათაური: Mad Max: Fury Road </p>
+                <p>რეჟისორი: George Miller</p>
+                <p>სცენარის ავტორები: George Miller, Brendan McCarthy, Nico Lathouris</p>
+                <p>მსახიობები (ვარსკვლავები): <br>Tom Hardy, Charlize Theron, Nicholas Hoult</p>
+            </div>
+        </div>
+        <button id="loadBtn">ტოპ 10 ფილმის ნახვა</button>
+        <div id="moviesContainer"></div>
+    </section>
+</main>
+
+
+    <footer>
+        <div>
+            <p>© ყველა უფლება დაცულია</p>
+            <div>
+                <h4>დაგვიკავშირდით:</h4>
+                <p>ტელეფონი: +995555668899</p>
+                <p>მეილი: mymail@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="scripts/top10filmbtn.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/burgerbar.js"></script>
+    <script type="module" src="scripts/navigation.js"></script>
+    <script src="scripts/moviesearch.js"></script>
+    <script type="module" src="scripts/tmdbapi.js"></script>
+</body>
+</html>
